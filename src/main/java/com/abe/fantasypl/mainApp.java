@@ -22,7 +22,7 @@ public class mainApp {
        System.out.println("firstName secondName currentValue selectedByPercent transferIn transferOut netTransfer");
        for(Player P : Players)
        {
-       System.out.println(P.firstName +" "+ P.secondName +" "+P.currentValue+" "+ P.selectedByPercent + " " + P.transferIn +" "+ P.transferOut +" "+ "\n");
+       System.out.println(P.firstName +" "+ P.secondName +" "+P.currentValue+" "+ P.selectedByPercent + " " + P.transferIn +" "+ P.transferOut +" "+P.netTransfers + "\n");
        }
        
     }
