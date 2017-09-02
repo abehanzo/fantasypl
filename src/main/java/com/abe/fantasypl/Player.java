@@ -10,21 +10,28 @@ package com.abe.fantasypl;
  * @author Abraham
  */
 public class Player {
- String firstName;
- String secondName;
- int transferIn;
- int transferOut;
- int netTransfers;
 
-   
-  public Player(String firstName, String secondName, int transferIn, int transferOut) {
+    String firstName;
+    String secondName;
+    int transferIn;
+    int transferOut;
+    int netTransfers;
+    double selectedByPercent;
+    String currentValue;
+    
+
+    public Player(String firstName, String secondName, String currentValue, double selectedByPercent, int transferIn, int transferOut) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.transferIn = transferIn;
         this.transferOut = transferOut;
-        this.netTransfers = transferIn-transferOut;
+        this.selectedByPercent=selectedByPercent;
+        this.currentValue=currentValue;
+        this.netTransfers = transferIn - transferOut;
+      
     }
-  public String getFirstName() {
+
+    public String getFirstName() {
         return firstName;
     }
 
@@ -39,8 +46,16 @@ public class Player {
     public int getTransferOut() {
         return transferOut;
     }
-     public int getNetTransfers() {
+
+    public int getNetTransfers() {
         return netTransfers;
     }
- 
+    public double getSelectedByPercent() {
+        return selectedByPercent;
+    }
+
+    public String getCurrentValue() {
+        return currentValue;
+    }
+
 }

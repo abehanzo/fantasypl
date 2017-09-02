@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package com.abe.fantasypl;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,10 +19,10 @@ public class mainApp {
        ArrayList<Player> Players = new ArrayList();
        Players = jsonPull.extractData();  
        Collections.sort(Players, new sortPlayers());
-       System.out.println("firstName secondName transferIn transferOut netTransfer");
+       System.out.println("firstName secondName currentValue selectedByPercent transferIn transferOut netTransfer");
        for(Player P : Players)
        {
-       System.out.println(P.firstName +" "+ P.secondName +" "+ P.transferIn +" "+ P.transferOut +" "+ P.netTransfers + "\n");
+       System.out.println(P.firstName +" "+ P.secondName +" "+P.currentValue+" "+ P.selectedByPercent + " " + P.transferIn +" "+ P.transferOut +" "+ "\n");
        }
        
     }

@@ -13,6 +13,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -37,9 +38,13 @@ public class jsonPull {
           JSONObject p = elements.getJSONObject(i);
           String firstName = p.getString("first_name");
           String lastName = p.getString("second_name");
+          int nowCost = p.getInt("now_cost");
+          DecimalFormat df = new DecimalFormat("#.0");
+          String currentValue = df.format(nowCost/10.0);
+          double selectedByPercent = p.getDouble("selected_by_percent");
           int transferIn = p.getInt("transfers_in_event");
           int transferOut = p.getInt("transfers_out_event");
-          Players.add(new Player(firstName,lastName,transferIn,transferOut));
+          Players.add(new Player(firstName,lastName,currentValue,selectedByPercent,transferIn,transferOut));
       }
        return Players;
    }
